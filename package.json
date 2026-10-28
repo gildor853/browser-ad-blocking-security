@@ -1,0 +1,23 @@
+{
+  "name": "browser-ad-blocking-security",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Evidence-based analysis of why browser ad and tracker blocking belongs in the default security baseline, with layered protections and verified configuration examples.",
+  "author": "Gildor",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gildor853/browser-ad-blocking-security.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check:legal": "node scripts/check-legal.mjs",
+    "check:sources": "node scripts/check-sources.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "check:links:offline": "node scripts/check-links.mjs --offline",
+    "check": "npm run check:legal && npm run check:sources && npm run check:links"
+  }
+}
